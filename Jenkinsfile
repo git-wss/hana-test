@@ -6,5 +6,10 @@ pipeline {
                  sh('/var/cx-server/mtar/mbt build -p=xsa')
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying..'
+            }    
+        }
     }
 }
