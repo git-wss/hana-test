@@ -6,6 +6,6 @@ node() {
     }
 }
 
-stage('build') {
-    mtaBuild script: this
-}
+    stage('build') {
+        mtaBuild script: this
+    }
