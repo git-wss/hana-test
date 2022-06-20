@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                 sh('/var/cx-server/mtar/mbt build -p=xsa --mtar ${mtaName}.mtar -m=verbose')
+                 sh('/var/cx-server/mtar/mbt build -p=xsa')
             }
         }
     }
