@@ -1,0 +1,130 @@
+ID: BI_TAG_2022
+_schema-version: '2.1'
+version: 0.0.1
+
+modules:
+ - name: BI_TAG_2022_DB
+   type: hdb
+   path: BI_TAG_2022_DB
+   requires:
+    - name: hdi_BI_TAG_2022_DB
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name}
+
+
+
+    - name: cross-container-service-1
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+                          
+
+ - name: BI_TAG_2022_STAGE
+   type: hdb
+   path: BI_TAG_2022_STAGE
+   requires:
+    - name: hdi_BI_TAG_2022_STAGE
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name_3}
+
+
+
+    - name: cross-container-service-3
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: ServiceName_1
+        service: ~{the-service-name}
+
+ - name: BI_TAG_2022_CORE
+   type: hdb
+   path: BI_TAG_2022_CORE
+   requires:
+    - name: hdi_BI_TAG_2022_CORE
+      properties:
+        TARGET_CONTAINER: ~{hdi-container-name_2}
+
+    - name: cross-container-service-2
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+      # key Servicename in hdbgratns Datei
+        key: BI_TAG_2022_DB-service
+        # service Verknüpfung über diesen Namen auf HDI-Container weiter unten
+        service: ~{BI_TAG_2022_DB-name}
+                          
+
+ 
+    - name: cross-container-service-4
+      group: SERVICE_REPLACEMENTS
+
+      properties:
+        key: BI_TAG_2022_STAGE-service
+        service: ~{BI_TAG_2022_STAGE-name}
+                          
+
+resources:
+ - name: hdi_BI_TAG_2022_DB
+   parameters:
+      config:
+         schema: BI_TAG_2022_DB
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
+
+ - name: cross-container-service-1
+   parameters:
+      service-name: CUPS_SFLIGHT
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+   
+   
+ - name: hdi_BI_TAG_2022_STAGE
+   parameters:
+      config:
+         schema: BI_TAG_2022_STAGE
+   properties:
+      hdi-container-name_3: ${service-name}
+   type: com.sap.xs.hdi-container
+
+
+ - name: cross-container-service-3
+   parameters:
+      service-name: CUPS_SFLIGHT
+   properties:
+      the-service-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+
+
+ - name: hdi_BI_TAG_2022_CORE
+   parameters:
+      config:
+         schema: BI_TAG_2022_CORE
+   properties:
+      hdi-container-name_2: ${service-name}
+   type: com.sap.xs.hdi-container
+
+
+ - name: cross-container-service-2
+   parameters:
+#      service-name: XSA_BOSSECKER-a9jkbsyah5bhcdz0-BI_TAG_2022-hdi_BI_TAG_2022_DB
+      service-name: hdi_BI_TAG_2022_DB
+   properties:
+# Attribut vor dem Doppelpunkt, wie Servicename weiter oben 
+# So kann in der hdbgrants-Datei über den Servicenamen berechtigt werden und
+# es muss nicht der HDI-Container genommen werden
+      BI_TAG_2022_DB-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+
+
+ - name: cross-container-service-4
+   parameters:
+#      service-name: XSA_BOSSECKER-a9jkbsyah5bhcdz0-BI_TAG_2022-hdi_BI_TAG_2022_STAGE
+      service-name: hdi_BI_TAG_2022_STAGE
+   properties:
+      BI_TAG_2022_STAGE-name: ${service-name}
+   type: org.cloudfoundry.existing-service
+

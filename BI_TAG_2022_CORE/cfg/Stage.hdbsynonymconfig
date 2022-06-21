@@ -1,0 +1,31 @@
+{
+"sy_st_SAIPORT": { 
+	"target":{ 
+		"object": "SFL.st_SAIRPORT",
+		"schema.configure": "BI_TAG_2022_STAGE-service/schema" 
+		}
+	}
+	,
+"sy_st_SPFLI": { 
+	"target":{ 
+		"object": "SFL.st_SPFLI",
+		"schema.configure": "BI_TAG_2022_STAGE-service/schema" 
+		}
+	}
+	
+		,
+"sy_st_STICKET": { 
+	"target":{ 
+		"object": "SFL.st_STICKET",
+		"schema.configure": "BI_TAG_2022_STAGE-service/schema" 
+		}
+	}
+	,
+"sy_vt_STICKET": { 
+	"target":{ 
+		"object": "vt_STICKET",
+		"schema.configure": "BI_TAG_2022_STAGE-service/schema" 
+		}
+	}
+	
+}

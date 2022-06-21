@@ -1,0 +1,11 @@
+    /*@@layout{"layoutInfo":{"x":-334.0068359375,"y":-139.5}}*/
+    context SFL {
+
+        /*@@layout{"layoutInfo":{"x":-652,"y":-245.5}}*/
+        entity st_SAIRPORT {
+            key MANDT       : String(3);
+            key ID          : String(3);
+                NAME        : String(25);
+                TIME_ZONE   : String(6);
+        };
+    };

@@ -1,0 +1,16 @@
+{
+	"BI_TAG_2022_DB-service": {
+		"object_owner": {
+			"container_roles": [
+				"BI_TAG_2022_DB_external_access#"
+			]
+
+		},
+
+		"application_user": {
+			"container_roles": [
+				"BI_TAG_2022_DB_external_access"
+			]
+		}
+	}
+}

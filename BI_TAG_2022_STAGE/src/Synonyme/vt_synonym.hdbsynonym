@@ -1,0 +1,132 @@
+{
+  "sy_vt_SFLIMEAL": {
+    "target": {
+      "object": "vt_SFLIMEAL"
+    }
+  },
+  "sy_vt_SDESSERT": {
+    "target": {
+      "object": "vt_SDESSERT"
+    }
+  },
+  "sy_vt_SGEOCITY": {
+    "target": {
+      "object": "vt_SGEOCITY"
+    }
+  },
+  "sy_vt_SMACOURSE": {
+    "target": {
+      "object": "vt_SMACOURSE"
+    }
+  },
+  "sy_vt_SMEAL": {
+    "target": {
+      "object": "vt_SMEAL"
+    }
+  },
+  "sy_vt_SNVOICE": {
+    "target": {
+      "object": "vt_SNVOICE"
+    }
+  },
+  "sy_vt_SMEALT": {
+    "target": {
+      "object": "vt_SMEALT"
+    }
+  },
+  "sy_vt_SBOOK": {
+    "target": {
+      "object": "vt_SBOOK"
+    }
+  },
+  "sy_vt_SMENU": {
+    "target": {
+      "object": "vt_SMENU"
+    }
+  },
+  "sy_vt_SSTARTER": {
+    "target": {
+      "object": "vt_SSTARTER"
+    }
+  },
+  "sy_vt_SPFLI": {
+    "target": {
+      "object": "vt_SPFLI"
+    }
+  },
+  "sy_vt_SPPLANE": {
+    "target": {
+      "object": "vt_SPPLANE"
+    }
+  },
+  "sy_vt_STICKET": {
+    "target": {
+      "object": "vt_STICKET"
+    }
+  },
+  "sy_vt_STRAVELAG": {
+    "target": {
+      "object": "vt_STRAVELAG"
+    }
+  },
+  "sy_vt_SCARPLAN": {
+    "target": {
+      "object": "vt_SCARPLAN"
+    }
+  },
+  "sy_vt_SBUSPART": {
+    "target": {
+      "object": "vt_SBUSPART"
+    }
+  },
+  "sy_vt_SAPLANE": {
+    "target": {
+      "object": "vt_SAPLANE"
+    }
+  },
+  "sy_vt_SCARR": {
+    "target": {
+      "object": "vt_SCARR"
+    }
+  },
+  "sy_vt_SCURR": {
+    "target": {
+      "object": "vt_SCURR"
+    }
+  },
+  "sy_vt_SCPLANE": {
+    "target": {
+      "object": "vt_SCPLANE"
+    }
+  },
+  "sy_vt_SCITAIRP": {
+    "target": {
+      "object": "vt_SCITAIRP"
+    }
+  },
+  "sy_vt_SCOUNTER": {
+    "target": {
+      "object": "vt_SCOUNTER"
+    }
+  },
+  "sy_vt_SCUSTOM": {
+    "target": {
+      "object": "vt_SCUSTOM"
+    }
+  },
+  "sy_vt_SCURX": {
+    "target": {
+      "object": "vt_SCURX"
+    }
+  },
+  "sy_vt_SFLIGHT": {
+    "target": {
+      "object": "vt_SFLIGHT"
+    }
+  },
+  "sy_vt_SAIRPORT": {
+    "target": {
+      "object": "vt_SAIRPORT"
+    }
+  }
+}

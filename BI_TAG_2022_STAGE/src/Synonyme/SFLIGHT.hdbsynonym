@@ -1,0 +1,158 @@
+{
+  "SAIRPORT": {
+    "target": {
+      "object": "SAIRPORT",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SAPLANE": {
+    "target": {
+      "object": "SAPLANE",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SBOOK": {
+    "target": {
+      "object": "SBOOK",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SBUSPART": {
+    "target": {
+      "object": "SBUSPART",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SCARPLAN": {
+    "target": {
+      "object": "SCARPLAN",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SCARR": {
+    "target": {
+      "object": "SCARR",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SCITAIRP": {
+    "target": {
+      "object": "SCITAIRP",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SCOUNTER": {
+    "target": {
+      "object": "SCOUNTER",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SCPLANE": {
+    "target": {
+      "object": "SCPLANE",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SCURR": {
+    "target": {
+      "object": "SCURR",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SCURX": {
+    "target": {
+      "object": "SCURX",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SCUSTOM": {
+    "target": {
+      "object": "SCUSTOM",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SDESSERT": {
+    "target": {
+      "object": "SDESSERT",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SFLIGHT": {
+    "target": {
+      "object": "SFLIGHT",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SFLIMEAL": {
+    "target": {
+      "object": "SFLIMEAL",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SGEOCITY": {
+    "target": {
+      "object": "SGEOCITY",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SMACOURSE": {
+    "target": {
+      "object": "SMACOURSE",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SMEAL": {
+    "target": {
+      "object": "SMEAL",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SMEALT": {
+    "target": {
+      "object": "SMEALT",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SMENU": {
+    "target": {
+      "object": "SMENU",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SNVOICE": {
+    "target": {
+      "object": "SNVOICE",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SPFLI": {
+    "target": {
+      "object": "SPFLI",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SPPLANE": {
+    "target": {
+      "object": "SPPLANE",
+      "schema": "SFLIGHT"
+    }
+  },
+  "SSTARTER": {
+    "target": {
+      "object": "SSTARTER",
+      "schema": "SFLIGHT"
+    }
+  },
+  "STICKET": {
+    "target": {
+      "object": "STICKET",
+      "schema": "SFLIGHT"
+    }
+  },
+  "STRAVELAG": {
+    "target": {
+      "object": "STRAVELAG",
+      "schema": "SFLIGHT"
+    }
+  }
+}

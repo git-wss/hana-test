@@ -1,0 +1,11 @@
+{
+	"CUPS_SFLIGHT": {
+		"object_owner": {
+			"roles": ["XSA_BOSSECKER::SFlight_TK::external_access_g"]
+		},
+
+		"application_user": {
+			"roles": ["XSA_BOSSECKER::SFlight_TK::external_access"]
+		}
+	}
+}

@@ -1,0 +1,12 @@
+{
+  "role": {
+    "name": "BI_TAG_2022_STAGE_external_access#",
+    "schema_privileges": [
+      {
+        "privileges_with_grant_option": [
+          "SELECT"
+        ]
+      }
+    ]
+  }
+}

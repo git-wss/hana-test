@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="cv_FLIGHTS" applyPrivilegeType="NONE" dataCategory="DEFAULT" schemaVersion="3.0" outputViewType="Projection" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="cv_FLIGHTS"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="SFL.co_STICKET">
+    <resourceUri>SFL.co_STICKET</resourceUri>
+  </DataSource>
+  <DataSource id="SFL.co_FLIGHTS">
+    <resourceUri>SFL.co_FLIGHTS</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_1">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="CARRID"/>
+      <viewAttribute id="CONNID"/>
+      <viewAttribute id="FLDATE"/>
+      <viewAttribute id="BOOKID"/>
+      <viewAttribute id="CUSTOMID"/>
+      <viewAttribute id="TICKET"/>
+      <viewAttribute id="PLACE"/>
+      <viewAttribute id="ARCH"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="SFL.co_STICKET">
+      <mapping xsi:type="Calculation:AttributeMapping" target="ARCH" source="ARCHIVE_"/>
+    </input>
+  </calculationView>
+  <calculationView xsi:type="Calculation:ProjectionView" id="Projection_2">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="CARRID"/>
+      <viewAttribute id="CONNID"/>
+      <viewAttribute id="COUNTRYFR"/>
+      <viewAttribute id="CITYFROM"/>
+      <viewAttribute id="AIRPFROM"/>
+      <viewAttribute id="COUNTRYTO"/>
+      <viewAttribute id="CITYTO"/>
+      <viewAttribute id="AIRPTO"/>
+      <viewAttribute id="FLTIME"/>
+      <viewAttribute id="DEPTIME"/>
+      <viewAttribute id="ARRTIME"/>
+      <viewAttribute id="DISTANCE"/>
+      <viewAttribute id="DISTID"/>
+      <viewAttribute id="FLTYPE"/>
+      <viewAttribute id="PERIOD"/>
+      <viewAttribute id="AIRP_NAME"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="SFL.co_FLIGHTS"/>
+  </calculationView>
+  <calculationView xsi:type="Calculation:JoinView" id="Join_1" cardinality="CN_N" joinType="inner">
+    <viewAttributes>
+      <viewAttribute id="MANDT"/>
+      <viewAttribute id="CARRID"/>
+      <viewAttribute id="CONNID"/>
+      <viewAttribute id="CITYFROM"/>
+      <viewAttribute id="AIRPFROM"/>
+    </viewAttributes>
+    <calculatedViewAttributes/>
+    <input node="Projection_1">
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CARRID" source="CARRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONNID" source="CONNID"/>
+    </input>
+    <input node="Projection_2">
+      <mapping xsi:type="Calculation:AttributeMapping" target="CITYFROM" source="CITYFROM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="AIRPFROM" source="AIRPFROM"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="MANDT" source="MANDT"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CARRID" source="CARRID"/>
+      <mapping xsi:type="Calculation:AttributeMapping" target="CONNID" source="CONNID"/>
+    </input>
+    <joinAttribute name="MANDT"/>
+    <joinAttribute name="CARRID"/>
+    <joinAttribute name="CONNID"/>
+  </calculationView>
+</calculationViews>
+<logicalModel id="Join_1">
+  <attributes>
+    <attribute id="MANDT" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="MANDT"/>
+      <keyMapping columnObjectName="Join_1" columnName="MANDT"/>
+    </attribute>
+    <attribute id="CARRID" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CARRID"/>
+      <keyMapping columnObjectName="Join_1" columnName="CARRID"/>
+    </attribute>
+    <attribute id="CONNID" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CONNID"/>
+      <keyMapping columnObjectName="Join_1" columnName="CONNID"/>
+    </attribute>
+    <attribute id="CITYFROM" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CITYFROM"/>
+      <keyMapping columnObjectName="Join_1" columnName="CITYFROM"/>
+    </attribute>
+    <attribute id="AIRPFROM" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="AIRPFROM"/>
+      <keyMapping columnObjectName="Join_1" columnName="AIRPFROM"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  
+    <shape expanded="true" modelObjectName="Projection_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="-125" y="374"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Projection_2" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="283" y="384"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape expanded="true" modelObjectName="Join_1" modelObjectNameSpace="CalculationView">
+      <upperLeftCorner x="66" y="232"/>
+      <rectangleSize height="30" width="160"/>
+    </shape>
+    <shape modelObjectName="Projection_1" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="20" y="30"/>
+      <rectangleSize width="136"/>
+    </shape>
+    <shape modelObjectName="Projection_2" modelObjectNameSpace="Join_1" modelObjectType="JoinNodeInput">
+      <upperLeftCorner x="320" y="30"/>
+      <rectangleSize width="136"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

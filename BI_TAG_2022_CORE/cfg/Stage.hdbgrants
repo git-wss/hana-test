@@ -1,0 +1,16 @@
+{
+	"BI_TAG_2022_STAGE-service": {
+		"object_owner": {
+			"container_roles": [
+				"BI_TAG_2022_STAGE_external_access#"
+			]
+
+		},
+
+		"application_user": {
+			"container_roles": [
+				"BI_TAG_2022_STAGE_external_access"
+			]
+		}
+	}
+}

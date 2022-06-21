@@ -1,0 +1,43 @@
+    /*@@layout{"layoutInfo":{"x":-334.0068359375,"y":-139.5}}*/
+    context SFL {
+
+        /*@@layout{"layoutInfo":{"x":-652,"y":-245.5}}*/
+
+      
+        entity co_FLIGHTS {
+            key MANDT       : String(3);
+            key CARRID          : String(3);
+            key CONNID        : String(25);
+                COUNTRYFR   : String(6);
+                CITYFROM : String(50);
+                AIRPFROM : String(50);
+               COUNTRYTO : String(50);
+               CITYTO : String(50);
+                AIRPTO : String(50);
+                FLTIME : String(50);
+                DEPTIME : String(50);
+                ARRTIME : String(50);
+                DISTANCE: Decimal(9,4);
+                DISTID : String(50);
+                FLTYPE : String(50);
+                "PERIOD": String(50);
+                "AIRP_NAME": String(150);
+        }; 
+        
+        
+       entity co_STICKET {
+            key MANDT       : String(3);
+            key CARRID          : String(3);
+            key CONNID        : String(25);
+            key FLDATE : String(50);
+            key BOOKID : String(50);
+            key CUSTOMID : String(50);
+            key TICKET : String(50);
+            PLACE : String(50);
+            "ARCHIVE_" : String(50);
+        };
+        
+    };
+        
+
+    
